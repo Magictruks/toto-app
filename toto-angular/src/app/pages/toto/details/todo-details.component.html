@@ -1,0 +1,10 @@
+<ng-container *ngIf="todo$ | async as todo; else loadingTemplate">
+  <p>{{ todo.id }}</p>
+  <p>{{ todo.title }}</p>
+  <p>{{ todo.completed }}</p>
+  <p>{{ todo.userId }}</p>
+</ng-container>
+
+<ng-template #loadingTemplate>
+  <p>Loading...</p>
+</ng-template>

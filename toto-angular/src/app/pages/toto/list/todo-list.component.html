@@ -1,0 +1,5 @@
+<div class="container">
+    <ng-container *ngFor="let todo of todos$ | async">
+        <p (click)="goToDetails(todo.id)">{{ todo.id }} {{ todo.title }}</p>
+    </ng-container>
+</div>
